@@ -97,10 +97,37 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+    padding: 10px;
 }
 
 .result-show-name {
+    margin-top: 5px;
+    text-decoration: none;
     color: var(--clr-white);
+    font-size: 1.3rem;
+}
+
+.result-show-name:hover {
+    text-decoration: underline;
+}
+
+.result-show-name:active {
+    color: var(--clr-yellow-text);
+}
+
+.result-show-rating {
+    position: absolute;
+    left: 15px;
+    top: 10px;
+}
+
+.result-show-rating-text {
+    color: var(--clr-black);
+    padding: 0px 5px;
+    border-radius: 5px;
+    padding-left: 5px;
+    background-color: var(--clr-yellow-text);
 }
 
 @media (max-width: 780px) {

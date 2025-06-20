@@ -22,17 +22,28 @@ const GetTvShows = async (searhInput) => {
         for (show of shows) {
 
             const newDiv = document.createElement('div')
+            const ratingDiv = document.createElement('div')
             const newImg = document.createElement('img')
-            const newTitle = document.createElement('h3')
+            const newTitle = document.createElement('a')
+            const showRating = document.createElement('p')
 
             newDiv.classList.add('result-show')
             newTitle.classList.add('result-show-name')
+            ratingDiv.classList.add('result-show-rating')
+            showRating.classList.add('result-show-rating-text')
 
             searchResults.append(newDiv)
             newDiv.append(newImg)
             newDiv.append(newTitle)
+            newDiv.append(ratingDiv)
+            ratingDiv.append(showRating)
+
+
             newImg.src = `${show.show.image.medium}`
-            newTitle.innerHTML = `${show.show.name}`
+            newTitle.innerText = show.show.name
+            newTitle.href = show.show.officialSite
+            showRating.innerHTML = `<p><i class = "fa-solid fa-star"></i>${show.show.rating.average}</p>`
+
         }
     }
     catch (error) {
