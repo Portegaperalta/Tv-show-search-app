@@ -9,6 +9,7 @@ const featuredSection = document.querySelector('.featured-today')
 const featuredSectionShows = document.querySelector('featured-today-shows')
 const searchResultSection = document.querySelector('search-results')
 const searchResults = document.querySelector('#searchResultShows')
+const searchResultsTitle = document.querySelector('.search-results h2')
 const premiereSection = document.querySelector('.premieres-annoucements')
 
 // TV API functions
@@ -34,7 +35,7 @@ const GetTvShows = async (searhInput) => {
 searchShowForm.addEventListener('submit', (e) => {
     e.preventDefault()
     GetTvShows(searchInput.value)
-
+    searchResultsTitle.innerHTML = `Search: ${searchInput.value}`
     featuredSection.classList.add('hidden')
     premiereSection.classList.add('hidden')
 })

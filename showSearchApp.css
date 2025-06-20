@@ -86,6 +86,14 @@ section {
 
 #searchResultShows {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
+}
+
+@media (max-width: 780px) {
+    .logo {
+        display: none;
+    }
 }
