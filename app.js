@@ -29,6 +29,7 @@ const GetTvShows = async (searhInput) => {
 
             newDiv.classList.add('result-show')
             newTitle.classList.add('result-show-name')
+            newImg.classList.add('result-show-image')
             ratingDiv.classList.add('result-show-rating')
             showRating.classList.add('result-show-rating-text')
 
