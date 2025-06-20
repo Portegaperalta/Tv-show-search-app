@@ -14,11 +14,16 @@
     <header>
         <div class="logo">
             <i class="fa-solid fa-film"></i>
-            <h1>TV Show Search</h1>
+            <a href="/showSearchApp.html">
+                <h1>TV Show Search</h1>
+            </a>
         </div>
         <div class="header-Search">
-            <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
-            <input id="searchShowInput" class="search-show-input" type="search" placeholder="Search Shows">
+            <form id="headerSearchForm" action="#">
+                <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+                <input id="searchShowInput" class="search-show-input" type="search" placeholder="Search Shows"
+                    autocomplete="off">
+            </form>
         </div>
     </header>
 
@@ -29,6 +34,11 @@
                 <div class="featured-today-shows">
 
                 </div>
+            </section>
+
+            <section class="search-results">
+                <h2 class="section-title">Search: </h2>
+                <div id="searchResultShows"></div>
             </section>
 
             <section class="premieres-annoucements">

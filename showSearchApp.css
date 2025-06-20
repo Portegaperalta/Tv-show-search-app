@@ -13,7 +13,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    gap: 200px;
+    gap: 100px;
     margin-bottom: 100px;
 }
 
@@ -28,6 +28,10 @@ header {
     font-size: 2rem;
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 .logo h1 {
     font-size: 1.5rem;
     color: var(--clr-white);
@@ -38,12 +42,15 @@ header {
     max-width: 800px;
     background-color: var(--clr-white);
     padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#headerSearchForm {
     display: flex;
     align-items: center;
     flex-direction: row;
-    gap: 10px;
-    border-radius: 5px;
-    cursor: pointer;
+    gap: 5px;
 }
 
 .header-Search i {
@@ -75,4 +82,10 @@ section {
 
 .section-title {
     color: var(--clr-yellow-text);
+}
+
+#searchResultShows {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 }
