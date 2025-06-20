@@ -9,7 +9,7 @@ const featuredSection = document.querySelector('#featuredToday')
 const featuredSectionShows = document.querySelector('#featuredTodayShows')
 const searchResultSection = document.querySelector('#searchResults')
 const searchResults = document.querySelector('#searchResultShows')
-const searchResultsTitle = document.querySelector('.search-results h2')
+const searchResultsTitle = document.querySelector('#searchResults h2')
 const premiereSection = document.querySelector('#premieresAnnoucements')
 const premiereSectionShows = document.querySelector('#premieresAnnoucementsShows')
 
@@ -89,12 +89,12 @@ displayPremiereShows()
 
 // Search shows functions
 
-const searchTvShows = async (searhInput) => {
+const searchTvShows = async (searchTerm) => {
     try {
-        const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchInput.value}`)
+        const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchTerm}`)
         const shows = res.data
         searchResults.innerHTML = ''
-        for (show of shows) {
+        for (let show of shows) {
 
             const newDiv = document.createElement('div')
             const ratingDiv = document.createElement('div')
