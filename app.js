@@ -20,9 +20,19 @@ const GetTvShows = async (searhInput) => {
         const shows = res.data
         searchResults.innerHTML = ''
         for (show of shows) {
+
+            const newDiv = document.createElement('div')
             const newImg = document.createElement('img')
-            searchResults.append(newImg)
+            const newTitle = document.createElement('h3')
+
+            newDiv.classList.add('result-show')
+            newTitle.classList.add('result-show-name')
+
+            searchResults.append(newDiv)
+            newDiv.append(newImg)
+            newDiv.append(newTitle)
             newImg.src = `${show.show.image.medium}`
+            newTitle.innerHTML = `${show.show.name}`
         }
     }
     catch (error) {

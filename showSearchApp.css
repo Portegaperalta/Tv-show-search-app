@@ -92,6 +92,17 @@ section {
     gap: 30px;
 }
 
+.result-show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-show-name {
+    color: var(--clr-white);
+}
+
 @media (max-width: 780px) {
     .logo {
         display: none;
