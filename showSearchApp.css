@@ -84,6 +84,16 @@ section {
     color: var(--clr-yellow-text);
 }
 
+#featuredTodayShows {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+}
+
 #searchResultShows {
     display: flex;
     align-items: center;
