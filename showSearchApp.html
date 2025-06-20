@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="showSearchApp.css">
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Show Search App</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-film"></i>
+            <h1>TV Show Search</h1>
+        </div>
+        <div class="header-Search">
+            <i id="searchBtn" class="fa-solid fa-magnifying-glass"></i>
+            <input id="searchShowInput" class="search-show-input" type="search" placeholder="Search Shows">
+        </div>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <section class="featured-today">
+                <h2 class="section-title">Featured Today</h2>
+                <div class="featured-today-shows">
+
+                </div>
+            </section>
+
+            <section class="premieres-annoucements">
+                <h2 class="section-title">Premieres and Announcements</h2>
+            </section>
+        </div>
+    </main>
+
+    <!-- fontAwesome Js -->
+    <script src="https://kit.fontawesome.com/389cdbd17f.js" crossorigin="anonymous"></script>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- Custom js -->
+    <script src="app.js"></script>
+</body>
+
+</html>
