@@ -14,7 +14,18 @@ const premiereSection = document.querySelector('.premieres-annoucements')
 
 // TV API functions
 
-const GetTvShows = async (searhInput) => {
+const displayFeaturedShows = async () => {
+    try {
+        const res = await axios.get('https://api.tvmaze.com/shows?page=1')
+        console.log(res)
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+displayFeaturedShows()
+
+const searchTvShows = async (searhInput) => {
     try {
         const res = await axios.get(`https://api.tvmaze.com/search/shows?q=${searchInput.value}`)
         const shows = res.data
@@ -56,7 +67,7 @@ const GetTvShows = async (searhInput) => {
 
 searchShowForm.addEventListener('submit', (e) => {
     e.preventDefault()
-    GetTvShows(searchInput.value)
+    searchTvShows(searchInput.value)
     searchResultsTitle.innerHTML = `Search: ${searchInput.value}`
     featuredSection.classList.add('hidden')
     premiereSection.classList.add('hidden')
